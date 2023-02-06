@@ -47,13 +47,13 @@ const sketch = () => {
 
   //create the colors array
   const colors = colormap({
-    colormap : 'cubehelix ',
+    colormap : 'cubehelix',
     nshades : 360,
   })
 
   return ({ context, width, height }) => {
     context.fillStyle = 'rgb(240,240,240)';
-    context.roundRect(0, 0, width, height,100);
+    context.fillRect(0, 0, width, height,100);
     context.fill();
 
     if(!audioContext) return;
@@ -143,5 +143,3 @@ const start = async () => {
 
 
 start();
-const canvas = document.getElementsByTagName("canvas")[0];
-canvas.style.borderRadius = '25%';
